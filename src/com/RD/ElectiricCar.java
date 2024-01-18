@@ -9,4 +9,12 @@ public class ElectiricCar extends CarSkeleton{
         this.averageKmPerCharge = averageKmPerCharge;
         this.batterySize = batterySize;
     }
+
+    public double getAverageKmPerCharge() {
+        return averageKmPerCharge;
+    }
+
+    public int getBatterySize() {
+        return batterySize;
+    }
 }

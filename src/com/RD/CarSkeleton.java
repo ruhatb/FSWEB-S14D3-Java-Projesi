@@ -37,9 +37,18 @@ public class CarSkeleton {
         return getName() + " driving."
 
     }
+// asagıdaki kodda 2 farklı sout metotdu yazılmıtır örnek olarak.
 
     protected String runEngine(CarSkeleton skeleton){
         System.out.println(skeleton.getClass().getSimpleName());
+        if (skeleton instanceof ElectiricCar) {
+            double batterySize = ((ElectiricCar) skeleton).getBatterySize();
+            System.out.println(" batery size :" + batterySize );
+        } else if ( skeleton instanceof  HybridCar) {
+            HybridCar hybridCar = ((HybridCar) skeleton);
+            System.out.println("hybrid per liter :" + hybridCar.getAverage() );
+
+        }
 
     }
 }
